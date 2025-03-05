@@ -22,3 +22,34 @@ abs(5)
 
 
 """
+
+şekil = input("Hangi Şekli Öğrenmek istiyorsunuz? ")
+
+if şekil == "Dörtgen":
+    print("Kenarları Sırasıyla Giriniz:")
+    kenar_1 = int(input("Birinci Kenarı Giriniz: "))
+    kenar_2 = int(input("İkinci Kenarı Giriniz: "))
+    kenar_3 = int(input("Üçüncü Kenarı Giriniz: "))
+    kenar_4 = int(input("Dördüncü Kenarı Giriniz: "))
+    if kenar_1 == kenar_2 == kenar_3 == kenar_4:
+        print("Kare")
+    elif kenar_1 == kenar_3 and kenar_2 == kenar_4:
+        print("Dikdörtgen")
+    else:
+        print("Sıradan Dörtgen")
+
+elif şekil == "üçgen":
+    print("Kenarları Sırasıyla Giriniz")
+    kenar_1 = int(input("Birinci Kenarı Giriniz: "))
+    kenar_2 = int(input("İkinci Kenarı Giriniz: "))
+    kenar_3 = int(input("Üçüncü Kenarı Giriniz: "))
+    if abs(kenar_1 + kenar_2) > kenar_3 and abs(kenar_1 + kenar_3) > kenar_2 and abs(kenar_2 + kenar_3) > kenar_1:
+        if kenar_1 == kenar_2 and kenar_1 == kenar_3:
+            print("Eşkenar üçgen")
+        elif (kenar_1 == kenar_2 and kenar_1 != kenar_3) or (kenar_1 == kenar_3 and kenar_1 != kenar_2) or (kenar_2 == kenar_3 and kenar_2 != kenar_1):
+            print("İkizkenar Üçgen")
+        else:
+            print("Çeşitkenar Üçgen")
+
+    else:
+        print("Geçersiz Şekil")
