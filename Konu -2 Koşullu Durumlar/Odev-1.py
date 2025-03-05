@@ -12,3 +12,23 @@ BKİ 25 ile 30 arasındaysa --------> Fazla Kilolu
 
 BKİ 30'un üstündeyse -------------> Obez
 """
+
+print("""
+---------------------------------------
+Boy Kilo İndeksi Hesaplama
+---------------------------------------
+""")
+
+boy = float(input("Boyunuzu Giriniz (m): "))
+kilo = float(input("Kilonuzu Giriniz (kg): "))
+
+indeks = kilo / (boy ** 2)
+
+if indeks < 18.5:
+    print("Boy Kilo indeksiniz: {} olduğu için Zayıfsınız".format(indeks))
+elif indeks < 25:
+    print("Boy Kilo İndeksiniz: {} olduğu için Normal Kilodasınız".format(indeks))
+elif indeks < 30:
+    print("Boy Kilo İndeksiniz: {} olduğu için Fazla Kilodasınız".format(indeks))
+else:
+    print("OBEZ")
