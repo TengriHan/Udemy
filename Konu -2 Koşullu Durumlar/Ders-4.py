@@ -1,53 +1,47 @@
 """
-Koşullu durumlar - if - else
+if - elif - else durumları
+Bir çok durumu kontrol etmek için kullanılır.
 """
-space = "--------------------------"
-
-print("Örnek Python çalıştırılma mantığı")
-a = 2
-b = 3
-c = 4
-print(a + b + c)
-
-print(space)
-
-print("Örnek if kullanımı")
-if a == 2:
-    print(a)
-print("Merhaba")
-
-if a == 3:
-    print(a)
-print("Merhaba")
-
-print(space)
-
 """
-Koşullu durumlar belli koşullara göre belli işlemin yapılıp yapılmaması
+if koşul:
+elif başka bir koşul:
+elif başka bir koşul:
+elif başka bir koşul:
+else: yapılacak işler
 """
-# if Bloğu belirli bir koşulu kontrol etmek istersek kullanılan bloklardır.
-print("if koşul durumları")
-yas = int(input("Yaşınızı Giriniz: "))
+space = "----------------------------------"
 
-if yas < 18:
-    print("Bu mekana giremezsiniz!")
+print("if - elif - else kullanımı")
+islem = int(input("İşlem Giriniz: "))
 
-print(space)
-
-"""
-else bloğu if koşulu sağlanmadıysa else bloğu çalışır.
-"""
-print("else koşul durumları")
-if yas < 18:
-    print("Bu mekana giremezsiniz!")
+if islem == 1:
+    print("İşlem 1 seçildi")
+elif islem == 2:
+    print("İşlem 2 seçildi")
+elif islem == 3:
+    print("İşlem 3 seçildi")
+elif islem == 4:
+    print("İşlem 4 seçildi")
 else:
-    print("Mekana hoş geldiniz.")
+    print("Geçersiz işlem")
 
 print(space)
 
-sayı = int(input("Sayı: "))
+note = float(input("Notunuzu girin: "))
 
-if sayı < 0:
-    print("Negatif Sayı")
+if note >= 90:
+    print("AA")
+elif note >= 85:
+    print("BA")
+elif note >= 75:
+    print("CB")
+elif note >= 70:
+    print("CC")
+elif note >= 65:
+    print("CD")
+elif note >= 60:
+    print("DC")
+elif note >= 55:
+    print("DD")
 else:
-    print("Sıfır veya pozitif sayı")
+    print("Kaldınız!")

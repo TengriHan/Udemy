@@ -1,47 +1,53 @@
 """
-Mantıksal Bağlaçlar
-İki veya daha fazla koşulu kontrol ediyorsak kullanılır.
+Koşullu durumlar - if - else
 """
+space = "--------------------------"
 
-space = "----------------------------"
+print("Örnek Python çalıştırılma mantığı")
+a = 2
+b = 3
+c = 4
+print(a + b + c)
 
-"""
-and Operatörü bütün karşılaştırma işlemlerinin sonucunun True olmasına bakar. Bir tanesi bile farklıysa False çıkar.
-"""
-print("and Operatörü")
-print(1 < 2)
-print("Murat" == "Murat")
-print(1 < 2 and "Murat" == "Murat")
-print(1 < 2 and "Murat" == "Mehmet")
-print(1 > 2 and "Murat" == "Mehmet")
-print(1 < 2 and "Araba" == "Zula" and "Mehmet" == "Murat")
+print(space)
+
+print("Örnek if kullanımı")
+if a == 2:
+    print(a)
+print("Merhaba")
+
+if a == 3:
+    print(a)
+print("Merhaba")
 
 print(space)
 
 """
-or operatörü en az birinin True olmasına bakar. En az bir tanesi True ise True çıkar hiçbiri True değilse False çıkar.
+Koşullu durumlar belli koşullara göre belli işlemin yapılıp yapılmaması
 """
-print("or Operatörü")
-print(1 < 2 or "Mehmet" == "Murat")
-print(1 < 2 or "Mehmet" == "Mehmet")
-print(1 > 2 or "Mehmet" == "Murat")
-print(1 < 2 or "Araba" < "Zula" or "Mehmet" == "Murat" or 1.2 > 0.6)
+# if Bloğu belirli bir koşulu kontrol etmek istersek kullanılan bloklardır.
+print("if koşul durumları")
+yas = int(input("Yaşınızı Giriniz: "))
+
+if yas < 18:
+    print("Bu mekana giremezsiniz!")
 
 print(space)
 
 """
-not operatörü karşılaştırma işleminin tam tersi sonuca çevirir. 
-Yani True olan bir sonucu False, False olan sonucu True yapar
+else bloğu if koşulu sağlanmadıysa else bloğu çalışır.
 """
-print("not Operatörü")
-print(2 == 2)
-print(not 2 == 2)
-print("Mehmet" == "Murat")
-print(not "Mehmet" == "Murat")
+print("else koşul durumları")
+if yas < 18:
+    print("Bu mekana giremezsiniz!")
+else:
+    print("Mekana hoş geldiniz.")
 
 print(space)
 
-"""Bu 3 operatörü beraber kullanılabilri ama karmaşıklığa yol açabileceği için parantez kullanabiliriz"""
-print("3 operatörü aynı anda kullanma")
-print(not (2.14 > 3.49 or (2 != 2 and "Murat" == "Murat")))
-print("Araba" < "Zula" and ("Bebek" < "Çocuk" or (not 12 == 13)))
+sayı = int(input("Sayı: "))
+
+if sayı < 0:
+    print("Negatif Sayı")
+else:
+    print("Sıfır veya pozitif sayı")
