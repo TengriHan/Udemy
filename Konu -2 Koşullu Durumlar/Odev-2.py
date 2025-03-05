@@ -1,6 +1,12 @@
 """
 Kullanıcıdan 3 tane sayı alın ve en büyük sayıyı ekrana yazdırın
 """
+print("""
+----------------------------------------------------------
+En büyük sayıyı Bulma
+----------------------------------------------------------
+
+""")
 sayi_1 = int(input("Birinci sayıyı Giriniz: "))
 sayi_2 = int(input("İkinci sayıyı Giriniz: "))
 sayi_3 = int(input("Üçüncü sayıyı Giriniz: "))
