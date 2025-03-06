@@ -27,3 +27,4 @@ if toplam == sayi:
     print(sayi, "Mükemmel Sayıdır.")
 else:
     print(sayi, "Mükemmel Sayı değildir.")
+
