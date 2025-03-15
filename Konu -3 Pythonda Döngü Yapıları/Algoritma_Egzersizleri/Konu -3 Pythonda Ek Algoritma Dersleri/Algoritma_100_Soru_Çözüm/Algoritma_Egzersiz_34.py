@@ -15,7 +15,7 @@ for num in range(baslangic_sayi, bitis_sayi + 1):
     if num < 2:
         continue
 
-    asal = True  # Başta asal kabul et
+    asal = True
     for i in range(2, int(math.sqrt(num)) + 1):
         if num % i == 0:
             asal = False

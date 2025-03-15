@@ -6,18 +6,17 @@ Kullanıcıdan alınan basamak sayısı kadar Pascal üçgeninin basamaklarını
 
 basamak = int(input("Kaç basamaklı Pascal üçgeni istiyorsunuz? "))
 
-ucgen = [[1]]  # İlk satırı ekle
+ucgen = [[1]]
 
 for i in range(1, basamak):
-    satir = [1]  # Yeni satırın ilk elemanı 1
-    onceki_satir = ucgen[i - 1]  # Önceki satırı al
+    satir = [1]
+    onceki_satir = ucgen[i - 1]
 
     for j in range(len(onceki_satir) - 1):
-        satir.append(onceki_satir[j] + onceki_satir[j + 1])  # Yeni elemanları ekle
+        satir.append(onceki_satir[j] + onceki_satir[j + 1])
 
-    satir.append(1)  # Yeni satırın son elemanı da 1 olacak
-    ucgen.append(satir)  # Pascal üçgenine ekle
+    satir.append(1)
+    ucgen.append(satir)
 
-# Pascal üçgenini ekrana yazdır
 for satir in ucgen:
     print(" ".join(map(str, satir)).center(basamak * 4))
