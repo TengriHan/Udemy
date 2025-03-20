@@ -143,7 +143,7 @@ Bilgisayar Uygulaması - Seçenekler:
 {"-" * 80}
 """)
 
-bilgisayar = Bilgisayar()  # Bilgisayar sınıfından bir nesne oluştur
+bilgisayar = Bilgisayar()
 
 while True:
     islem = input("İşlem Seçiniz: ").strip()
@@ -152,7 +152,7 @@ while True:
         print("Programdan çıkılıyor...")
         break
     elif islem == "1":
-        bilgisayar.pc_ac()  # Nesne üzerinden çağır
+        bilgisayar.pc_ac()
     elif islem == "2":
         bilgisayar.pc_kapat()
     elif islem == "3":
@@ -164,7 +164,7 @@ while True:
     elif islem == "6":
         bilgisayar.mod_secimi()
     elif islem == "7":
-        print(bilgisayar)  # __str__ çağrılır
+        print(bilgisayar)
     elif islem == "8":
         print(f"Toplam Sayfa Sayısı: {len(bilgisayar)}")
     else:
